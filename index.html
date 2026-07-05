@@ -6,6 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My ID</title>
 
+<!-- PWA -->
 <link rel="manifest" href="manifest.json">
 
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -29,10 +30,13 @@ body {
     justify-content: center;
     align-items: center;
     padding: 18px;
-    background: linear-gradient(rgba(0, 60, 40, 0.85), rgba(0, 25, 18, 0.92));
+    background: linear-gradient(
+        rgba(0, 70, 45, 0.85),
+        rgba(0, 25, 18, 0.92)
+    );
 }
 
-/* MAIN WRAPPER */
+/* MAIN CONTAINER */
 .container {
     width: 92vw;
     max-width: 360px;
@@ -41,15 +45,15 @@ body {
     gap: 14px;
 }
 
-/* BOX STYLE */
+/* GENERIC CARD BOX */
 .box {
-    background: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.93);
     border-radius: 18px;
     padding: 14px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
-/* TOP BOX */
+/* TOP SECTION */
 .top {
     background: #0f5a3c;
     color: white;
@@ -68,28 +72,31 @@ body {
     margin-top: 4px;
 }
 
-/* PHOTO BOX (separate, no overlap) */
-.photo-box {
+/* PHOTO */
+.photo-wrapper {
     display: flex;
     justify-content: center;
-    padding: 18px;
 }
 
 .photo {
-    width: 150px;
-    height: 150px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     background: #dcdcdc;
     background-size: cover;
     background-position: center;
     border: 5px solid white;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
 }
 
-/* INFO BOX */
+/* INFO SECTION */
 .info .field {
     padding: 10px 0;
     border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+
+.info .field:last-child {
+    border-bottom: none;
 }
 
 .label {
@@ -104,7 +111,7 @@ body {
     margin-top: 3px;
 }
 
-/* VALIDITY BOX */
+/* VALIDITY SECTION */
 .validity {
     background: #0f5a3c;
     color: white;
@@ -128,14 +135,14 @@ body {
 
 <div class="container">
 
-    <!-- BOX 1: TITLE -->
+    <!-- BOX 1: INSTITUTION + FIELD -->
     <div class="box top">
         <h1>University of Example</h1>
         <h3>Computer Science / Engineering</h3>
     </div>
 
-    <!-- PHOTO (separate box, larger, no overlap) -->
-    <div class="box photo-box">
+    <!-- PHOTO (NO BOX, JUST CLEAN FLOATING SECTION) -->
+    <div class="photo-wrapper">
         <div class="photo" style="background-image:url('your-photo.jpg')"></div>
     </div>
 
