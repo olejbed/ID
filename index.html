@@ -16,137 +16,30 @@
 <meta name="theme-color" content="#0b3d2e">
 <link rel="apple-touch-icon" href="icon-192.png">
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 18px;
-    background: linear-gradient(
-        rgba(0, 70, 45, 0.55),
-        rgba(0, 25, 18, 0.65)
-    );
-}
-
-/* MAIN CONTAINER */
-.container {
-    width: 92vw;
-    max-width: 360px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* GENERIC CARD BOX */
-.box {
-    background: rgba(255, 255, 255, 0.93);
-    border-radius: 18px;
-    padding: 14px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-}
-
-/* TOP SECTION */
-.top {
-    background: #0f5a3c;
-    color: white;
-    text-align: center;
-    padding: 14px;
-}
-
-.top h1 {
-    font-size: 18px;
-}
-
-.top h3 {
-    font-size: 13px;
-    font-weight: normal;
-    opacity: 0.85;
-    margin-top: 4px;
-}
-
-/* PHOTO */
-.photo-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-.photo {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    background: #dcdcdc;
-    background-size: cover;
-    background-position: center;
-    border: 5px solid white;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.25);
-}
-
-/* INFO SECTION */
-.info .field {
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(0,0,0,0.08);
-}
-
-.info .field:last-child {
-    border-bottom: none;
-}
-
-.label {
-    font-size: 12px;
-    color: #666;
-}
-
-.value {
-    font-size: 15px;
-    font-weight: 600;
-    color: #111;
-    margin-top: 3px;
-}
-
-/* VALIDITY SECTION */
-.validity {
-    background: #0f5a3c;
-    color: white;
-    text-align: center;
-}
-
-.validity .small {
-    font-size: 12px;
-    opacity: 0.85;
-}
-
-.validity .big {
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 4px;
-}
-</style>
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- 🌄 BACKGROUND SVG -->
+<object class="background" type="image/svg+xml" data="background.svg"></object>
+
+<!-- MAIN CONTENT -->
 <div class="container">
 
-    <!-- BOX 1: INSTITUTION + FIELD -->
+    <!-- BOX 1: INSTITUTION -->
     <div class="box top">
         <h1>University of Kinshasa (UNIKIN)</h1>
         <h3>Bachelors of Life Science</h3>
     </div>
 
-    <!-- PHOTO (NO BOX, JUST CLEAN FLOATING SECTION) -->
+    <!-- PHOTO -->
     <div class="photo-wrapper">
         <div class="photo" style="background-image:url('ID.png')"></div>
     </div>
 
-    <!-- BOX 2: PERSONAL INFO -->
+    <!-- BOX 2: INFO -->
     <div class="box info">
 
         <div class="field">
@@ -156,7 +49,7 @@ body {
 
         <div class="field">
             <div class="label">Date of Birth</div>
-            <div class="value">05.10.1997</div>
+            <div class="value">10.05.1997</div>
         </div>
 
         <div class="field">
