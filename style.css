@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== PAGE BACKGROUND LAYER ===== */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 18px;
+    overflow: hidden;
+
+    background: linear-gradient(
+        135deg,
+        #0d3b2a 0%,
+        #16664a 50%,
+        #1d7f73 100%
+    );
+
+    position: relative;
+}
+
+/* SVG BACKGROUND LAYER (background.svg) */
+.background {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.55;
+    pointer-events: none;
+}
+
+/* ===== MAIN CONTAINER ===== */
+.container {
+    width: 92vw;
+    max-width: 380px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    position: relative;
+    z-index: 10;
+}
+
+/* ===== GLASS CARD BASE ===== */
+.box {
+    background: rgba(255, 255, 255, 0.72);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-radius: 18px;
+    padding: 14px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* ===== TOP HEADER ===== */
+.top {
+    background: rgba(15, 90, 60, 0.85);
+    color: white;
+    text-align: center;
+    padding: 16px;
+}
+
+.top h1 {
+    font-size: 18px;
+    letter-spacing: 0.3px;
+}
+
+.top h3 {
+    font-size: 13px;
+    font-weight: normal;
+    opacity: 0.85;
+    margin-top: 4px;
+}
+
+/* ===== PHOTO ===== */
+.photo-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 4px;
+}
+
+.photo {
+    width: 165px;
+    height: 165px;
+
+    border-radius: 50%;
+    background: #dcdcdc;
+    background-size: cover;
+    background-position: center;
+
+    border: 5px solid rgba(255, 255, 255, 0.9);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* ===== INFO SECTION ===== */
+.info .field {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.info .field:last-child {
+    border-bottom: none;
+}
+
+.label {
+    font-size: 12px;
+    color: #4a4a4a;
+    opacity: 0.8;
+}
+
+.value {
+    font-size: 15px;
+    font-weight: 600;
+    color: #111;
+    margin-top: 3px;
+}
+
+/* ===== VALIDITY SECTION ===== */
+.validity {
+    background: rgba(15, 90, 60, 0.9);
+    color: white;
+    text-align: center;
+}
+
+.validity .small {
+    font-size: 12px;
+    opacity: 0.85;
+}
+
+.validity .big {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+/* ===== OPTIONAL: subtle floating feel ===== */
+.container {
+    animation: floatIn 0.8s ease-out;
+}
+
+@keyframes floatIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
